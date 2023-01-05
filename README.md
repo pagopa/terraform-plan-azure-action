@@ -1,1 +1,1 @@
-# github-self-hosted-runner-azure-create-action
+# terraform-plan-azure-action
