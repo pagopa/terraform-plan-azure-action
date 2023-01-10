@@ -35,7 +35,8 @@ runs:
         uses: actions/cache@6fd2d4538ca777f67fccddb233cf1a8ff1339012
         with:
           path: ${{ inputs.dir }}/.terraform
-          key: terraform-${{ inputs.dir }}-${{ hashFiles('inputs.dir/**.tf') }}
+          # key: terraform-${{ inputs.dir }}-${{ hashFiles('inputs.dir/**.tf') }}
+          key: terraform-${{ inputs.dir }}-${{ hashFiles('{{ inputs.dir }}/**.tf') }}
 
       - name: Terraform plan
         shell: bash
